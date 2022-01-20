@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#"><img src="assets/images/logo.jpg"
+        style="width: 40px;height: 40px; box-shadow: 2px 2px 2px orange;"></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 " style="padding-top: 15px;">
+        <p *ngIf="session && session.token">A must to have technology for every small and medium enterprise, manpower
+          consultant or a contract staffing
+          business across the world… </p>
+      </ul>
+
+      <div class="d-flex">
+        <a routerLink="/login" style="text-decoration: none;"><i class="bi bi-box-arrow-in-right"></i><span
+            style="color:chocolate;font-weight:700;font-size:15px;">Login</span></a>
+
+
+      </div>
+      <!-- <div class="d-flex" *ngIf="session && session.token">
+        <button routerLink="/login" style="text-decoration: none; margin-left: 10px;"><i
+            class="bi bi-box-arrow-in-right"></i><span style="color:chocolate;font-weight:700;font-size:15px;"
+            (click)="onLogout">Logout</span></button>
+
+
+      </div> -->
+      <div class="d-flex" style="margin: 10px;"  *ngIf="session && session.token" >
+        <button mat-button [matMenuTriggerFor]="menu" style="border-style: none; background-color:white;">Sibbu</button>
+        <mat-menu #menu="matMenu">
+          <!-- <button mat-menu-item>Change Password</button> -->
+     
+          <button mat-button mat-menu-item (click)="onCreate()">Change Password</button>
+          <button mat-menu-item  (click)="onLogout()">Logout</button>
+        </mat-menu>
+        
+  </div>
+  </div>
+  </div>
+</nav>
+
+<!-- <ng-template #content let-modal>
+  <div class="modal-header" style="height: 50px;background-color: blue; ">
+    <h4 class="titel-mod" id="modal-basic-title">Forgot Password</h4>
+    <button type="button" class="close" style="border-style:none;background-color: blue;" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true" style="font-weight:700;color:white;font-size: 25px;">&times;</span>
+    </button>
+  </div> 
+  -->
+
+<!-- <div class="modal-body">
+    <form>
+      <div class="form-group">
+       
+        <div class="input-group">
+          <form [formGroup]="loginForm" class="example-form">
+            <label>User id<span style="color: red;">*</span></label>
+              <input type="email" placeholder="enter your user id" FormControlName="userid" style="    border-top: none;
+              border-right: none;
+              border-left: none;
+              width: 450px;
+              
+              border-block-color:blue;" >
+              <span *ngif="userid.invalid" style="color: red;font-size: 10px;">User ID Field is mandatory</span>
+              
+              
+          </form> 
+          
+          <div class="input-group-append">
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer" style=border:none>
+    <button type="button" class="btn btn-outline-dark1" (click)="modal.close('Save click')">Close</button>
+    <button type="button" class="btn btn-outline-dark2"  (click)="modal.close('Save click')">Find My Account?</button>
+  </div>
+</ng-template> -->
+<!-- <pre>{{ closeResult }}</pre> -->

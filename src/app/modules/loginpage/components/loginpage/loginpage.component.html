@@ -1,0 +1,92 @@
+<section>
+  <div class="row" style="width: 100%;">
+    <div class="col-md-8 com-sm-12" style="height: 88vh;">
+
+      <div class="heading"> <span>A first of its kind, AIML based recruitment software
+          (workbench) with world’s first
+          crowdsourcing platform to source ready-for-interview jobseekers in less than 10% of time required in manual
+          process and reduce the cost of sourcing process by 50% or more…</span></div>
+      <div class="text-center">
+        <img src="" alt="" style="padding:30px; margin-right: 3%; margin-left: 3%;">
+      </div>
+
+    </div>
+
+    <div class="col-md-4 com-sm-12 login-form-1">
+      <div class="login-logo">
+        <img src="assets/images/logo.jpg" alt="">
+      </div>
+      <h3>User Login</h3>
+      <form class="form" [formGroup]="loginForm" (ngSubmit)="addUserDetails()">
+        <div class="mb-3 form-group">
+
+          <input name="userid" type="text" formControlName="userid" required class="form-control rounded-0"
+            placeholder="User name">
+
+        </div>
+        <div class="mb-3 form-group">
+
+          <input name="password" type="password" formControlName="password" required class="form-control rounded-0"
+            placeholder="Enter password">
+        </div>
+        <div class="mb-3 form-check">
+
+          <!-- <a href="#" class="btnForgetPwd" value="login">forgot password?</a> -->
+          <!-- <button mat-button (click)="openDialog()">Launch dialog</button> -->
+
+          <!-- <a href="#" class="btnForgetPwd" (click)="open(content)">forgot password?</a> -->
+          <a class="btnForgetPwd" (click)="onResetPassword()">forgot password?</a>
+        </div>
+        <button type="submit"  class="btn btn-primary btnSubmit" style="color: white;">Login</button>
+
+
+      </form>
+    </div>
+  </div>
+  <!-- <ul *ngFor="let user of users">
+      <li>{{user.data}}</li>
+    </ul> -->
+
+</section>
+
+<!-- <ng-template #content let-modal>
+  <div class="modal-header" style="height: 50px;background-color: blue; ">
+    <h4 class="titel-mod" id="modal-basic-title">Forgot Password</h4>
+    <button type="button" class="close" style="border-style:none;background-color: blue;" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true" style="font-weight:700;color:white;font-size: 25px;">&times;</span>
+    </button>
+  </div> 
+<div class="modal-body">
+    <form>
+      <div class="form-group">
+       
+        <div class="input-group">
+          <form [formGroup]="loginForm" class="example-form">
+            <label>User id<span style="color: red;">*</span></label>
+              <input type="email" placeholder="enter your user id" FormControlName="userid" style="    border-top: none;
+              border-right: none;
+              border-left: none;
+              width: 450px;
+              
+              border-block-color:blue;" >
+              <span *ngif="userid.invalid" style="color: red;font-size: 10px;">User ID Field is mandatory</span>
+              
+              
+          </form> 
+          
+          <div class="input-group-append">
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer" style=border:none>
+    <button type="button" class="btn btn-outline-dark1" (click)="modal.close('Save click')">Close</button>
+    <button type="button" class="btn btn-outline-dark2"  (click)="modal.close('Save click')">Find My Account?</button>
+  </div>
+</ng-template> -->
+<!-- <pre>{{ closeResult }}</pre> -->
+
+
+

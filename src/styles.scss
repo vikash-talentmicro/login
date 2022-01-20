@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.custom-dialog-container .mat-dialog-container{
+    padding: 0px;
+    // height: 100%;
+    width: 400px;
+    // height: 300px;
+}
+.cdk-overlay-pane.my-dialog {
+    position: relative!important;
+  }
+  .close.mat-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px;
+    line-height: 14px;
+    min-width: auto;
+    
+  }
+  .close.mat-button.btn{
+    outline: none;
+    box-shadow: none;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
+    border-style:dotted;
+  }
+  *:focus{
+    outline: 0 !important;
+  }
+  .mat-icon-button.btn{
+    border: pink;
+  }
